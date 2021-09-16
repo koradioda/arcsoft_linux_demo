@@ -37,7 +37,7 @@ https://blog.csdn.net/weixin_41231810/article/details/120156439
    # 复制相关动态链接库
    sudo cp libarcsoft_face_engine.so /usr/local/lib/
    sudo cp libarcsoft_face.so /usr/local/lib/
-   # cenOS下 需要安装 qtmultimedia5-dev 包  执行之前先 更换yum 源，原版的yum 源太老了
+   # cenOS 8 下 需要安装 qtmultimedia5-dev 包  执行之前先 更换yum 源，原版的yum 源太老了
    sudo cp lib/* /usr/lib64/
    sudo yum install qt5-qtmultimedia   # 安装对应的qt动态链接库
    * c++ 动态链接库的更新可参考（如果有动态链接库的问题） https://tieba.baidu.com/p/5593470159 *
