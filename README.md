@@ -40,6 +40,7 @@ https://blog.csdn.net/weixin_41231810/article/details/120156439
    # cenOS下 需要安装 qtmultimedia5-dev 包
    sudo cp lib/* /usr/lib64/
    sudo yum install qt5-qtmultimedia   # 安装对应的qt动态链接库
+   * c++ 动态链接库的更新可参考（如果有动态链接库的问题） https://tieba.baidu.com/p/5593470159 *
    
    # 跟新链接库
    sudo ldconfig
