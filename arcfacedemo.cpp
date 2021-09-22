@@ -410,7 +410,19 @@ void FaceRecognition::getBaseInfo()
 
     ui->editOutLog->append(QString("\n************* Face Recognition *****************\n"));
 
-    res = ASFOnlineActivation((char*)APPID, (char*)SDKKEY,(char*)ACTIVEKEY);
+    QSettings *KeyInfo = new QSettings("settings.ini",QSettings::IniFormat);
+    QString appID = KeyInfo->value("/ActivateInfo/appID").toString();
+    QString sdkKEY = KeyInfo->value("/ActivateInfo/sdkKEY").toString();
+    QString activeKEY = KeyInfo->value("/ActivateInfo/activeKEY").toString();
+    delete KeyInfo;
+    QByteArray ba = appID.toLatin1();
+    APPID = ba.data();
+    QByteArray bs = sdkKEY.toLatin1();
+    SDKKEY = bs.data();
+    QByteArray bc = activeKEY.toLatin1();
+    ACTIVEKEY = bc.data();
+    res = ASFOnlineActivation(APPID, SDKKEY, ACTIVEKEY);
+    qDebug()<<APPID<<" "<<SDKKEY<<" "<< ACTIVEKEY;
     if (MOK != res && MERR_ASF_ALREADY_ACTIVATED != res)
             ui->editOutLog->append(QString("ASFOnlineActivation fail: %1\n").arg(res));
     else

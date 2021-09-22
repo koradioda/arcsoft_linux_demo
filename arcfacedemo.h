@@ -28,11 +28,12 @@
 #include <QSqlError>
 #include <QSqlQuery>
 #include <facesdatabase.h>
+#include <QSettings>
 
 
-#define APPID "Bbvyu5GeUE8eaBhyLsNcp49HW6tuPx3sqWog8i9S41Q7"
-#define SDKKEY "EvvwdWPFj7XjL1siCQiSD2qGb9XanUowPRYyVML8o3wL"
-#define ACTIVEKEY "8281-116U-R3YU-ZY85"
+// #define APPID "Bbvyu5GeUE8eaBhyLsNcp49HW6tuPx3sqWog8i9S41Q7"
+// #define SDKKEY "EvvwdWPFj7XjL1siCQiSD2qGb9XanUowPRYyVML8o3wL"
+// #define ACTIVEKEY "8281-116U-R3YU-ZY85"
 
 #define NSCALE 16
 #define FACENUM 5
@@ -109,8 +110,12 @@ private:
     QTimer *timer; //time count
     QLabel *timeLabel;
     QDir dir;
-
     QMap<QString,ASF_FaceFeature> featureDB;  // face feature base,for compare face,
+
+    // id,sdkkey,activatekey
+    char *APPID;
+    char *SDKKEY;
+    char *ACTIVEKEY;
 
     float score=0.0;
     QString predict;
@@ -140,6 +145,7 @@ private:
     // sql obj
     FacesDataBase *fDatabase;
     QMap<QString,QPixmap> pixMap;
+
 
 };
 #endif // ARCFACEDEMO_H
