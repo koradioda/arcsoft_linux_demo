@@ -28,6 +28,8 @@ private slots:
     void capture(const QVideoFrame &frame);
     void cameraWork();
     void recvDataFromGUI(const QSize& size,const QMap<QString,ASF_FaceFeature> &fDB);
+    int convert_yuv_to_rgb_pixel(int y, int u, int v);
+    int convert_yuv_to_rgb_buffer(unsigned char *yuv, unsigned char *rgb, unsigned int width, unsigned int height);
 
 signals:
     void sendCapture(const QImage &image,const QRect &rect,const QString &str);        // send captured to others

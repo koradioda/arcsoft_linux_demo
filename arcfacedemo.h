@@ -29,10 +29,10 @@
 #include <QSqlQuery>
 #include <facesdatabase.h>
 
-// 以下 id 和 key 和激活码都是样例，无法使用，请到官网申请使用
-#define APPID "Bbvyu5GeUE8eaBhyLsNcp49HW4Ygtx3sqWog8i9S41Q7"
-#define SDKKEY "EvvwdWPFj7XjL1siCQiSD2qGb9XanUosdRGYVML8o3wL"
-#define ACTIVEKEY "8281-RF8J-384U-ZY85"
+
+#define APPID "Bbvyu5GeUE8eaBhyLsNcp49HW6tuPx3sqWog8i9S41Q7"
+#define SDKKEY "EvvwdWPFj7XjL1siCQiSD2qGb9XanUowPRYyVML8o3wL"
+#define ACTIVEKEY "8281-116U-R3YU-ZY85"
 
 #define NSCALE 16
 #define FACENUM 5

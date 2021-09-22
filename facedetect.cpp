@@ -148,7 +148,7 @@ void FaceDetect::recvImageData(const QImage &image, const QSize &size, const QMa
 void FaceDetect::recvVideoData(const QVideoFrame &frame, const QSize &size, const QMap<QString, ASF_FaceFeature> &fDB)
 {
     mSize = size;
-    mImage = frame.image();
+//    mImage = frame.image();
     if(featureDB.isEmpty())
         featureDB = fDB;
 }

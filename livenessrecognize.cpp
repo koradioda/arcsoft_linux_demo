@@ -120,5 +120,5 @@ void LivenessRecognize::recvVideoData(const QVideoFrame &frame, const QSize &siz
 {
     Q_UNUSED(fDB);
     mSize = size;
-    mImage = frame.image();
+//    mImage = frame.image();
 }
