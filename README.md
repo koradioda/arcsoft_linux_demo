@@ -39,12 +39,12 @@ https://blog.csdn.net/weixin_41231810/article/details/120156439
    sudo cp libarcsoft_face.so /usr/local/lib/
    # 添加库路径到ld.so.conf，在该文件最后添加/usr/local/lib保存退出
    sudo vim  /etc/ld.so.conf  # 添加之前的库目录
-   #ldconfig   # 刷新库目录
+   ldconfig   # 刷新库目录
    
-   # cenOS 8 下 需要安装 qtmultimedia5-dev 包  执行之前先 更换yum 源，原版的yum 源太老了
+   # cenOS 8 下 需要安装 qtmultimedia5-dev 包  执行之前先 更换yum 源，原版的yum 源太老了，可在网上查找方法
    sudo cp lib/* /usr/lib64/
    sudo yum install qt5-qtmultimedia   # 安装对应的qt动态链接库
-   * c++ 动态链接库的更新可参考（如果有动态链接库的问题） https://tieba.baidu.com/p/5593470159 *
+   # ... 之后的操作与在ubuntu下一样
    
    # 跟新链接库
    sudo ldconfig
